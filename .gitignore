@@ -1,0 +1,31 @@
+# IntelliJ
+.idea/
+
+# Maven
+target/
+*.iml
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+build/
+
+# IDE-specific files
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# OS-specific files
+.DS_Store
+Thumbs.db
