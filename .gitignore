@@ -19,9 +19,6 @@ build/
 *.sln
 *.sw?
 
-# 대용량 파일
-build/libs/seoultour-0.0.1-SNAPSHOT.jar
-
 # Logs and databases
 *.log
 *.sql
@@ -32,3 +29,6 @@ build/libs/seoultour-0.0.1-SNAPSHOT.jar
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# Large files managed by Git LFS
+*.jar
