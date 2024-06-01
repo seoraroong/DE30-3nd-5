@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Tour Spots</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        ul{list-style-type: none;padding:0}
+        .hidden{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;overflow: hidden;clip: rect(0, 0, 0, 0);white-space: nowrap;border: 0}
+        .overflow {
+            width: 100%;
+            margin-top: 3px;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .tab-content{
+            height:300px;
+            overflow-y: auto;
+            overflow-x:hidden;
+        }
+        .tab_list{padding:10px 0}
+        .tab_list>li{
+            min-height:130px;
+            padding:15px 0;
+            margin:0 20px;
+            border-bottom:.5px solid #eeeeee;
+            font-size:13px;
+        }
+        .tab_list .tit{font-weight:bolder;font-size:15px}
+        .tab_list .sub{color:#949494;margin-bottom:10px}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>선택된 관광지 리스트</h2>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="tourTab" role="tablist">
+        <li class="nav-item" th:each="entry, iterStat : ${tourSpotsByType}">
+            <a class="nav-link" th:classappend="${iterStat.index == 0} ? 'active'"
+               th:id="'tab-' + ${entry.key}"
+               th:href="'#' + ${entry.key}"
+               data-toggle="tab"
+               role="tab"
+               th:aria-controls="${entry.key}"
+               th:aria-selected="${iterStat.index == 0}">[[${entry.key}]]</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade" th:each="entry, iterStat : ${tourSpotsByType}"
+             th:classappend="${iterStat.index == 0} ? 'show active'"
+             th:id="${entry.key}"
+             role="tabpanel"
+             th:aria-labelledby="'tab-' + ${entry.key}">
+            <ul class="tab_list">
+                <li th:each="tourSpot : ${entry.value}">
+                    <div class="tit"><strong class="hidden">관광지 이름</strong><span th:text="${tourSpot.placename}"></span></div>
+                    <div class="sub"><strong class="hidden">주소</strong> <span th:text="${tourSpot.addr}"></span></div>
+                    <div><strong class="hidden">개요</strong> <span th:text="${tourSpot.overview}" class="overflow"></span></div>
+                    <div><strong class="hidden">상세 정보</strong> <span th:text="${tourSpot.detail}" class="overflow"></span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
