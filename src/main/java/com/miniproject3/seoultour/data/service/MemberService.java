@@ -13,6 +13,11 @@ import org.springframework.stereotype.Service;
 public class MemberService {
     private final MemberDao memberDao;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public boolean hasUserId(String userid) {
+        return (memberDao.findByUserId(userid) != null) ? true : false ;
+    }
+
     public Member createMember(Member member){
         // 암호화
         member.setPassword( bCryptPasswordEncoder.encode(member.getPassword()) );

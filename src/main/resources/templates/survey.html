@@ -2,16 +2,174 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Survey</title>
+    <title>SeoulTour</title>
+    <link rel="stylesheet" href="/seoultour.css">
 </head>
 <body>
-<form action="#" th:action="@{/recommand}" th:object="${surveyForm}" method="post">
-    <label><input type="checkbox" th:field="*{surveyOptions[0]}" /> Option 1</label><br/>
-    <label><input type="checkbox" th:field="*{surveyOptions[1]}" /> Option 2</label><br/>
-    <label><input type="checkbox" th:field="*{surveyOptions[2]}" /> Option 3</label><br/>
-    <label><input type="checkbox" th:field="*{surveyOptions[3]}" /> Option 4</label><br/>
-    <label><input type="checkbox" th:field="*{surveyOptions[4]}" /> Option 5</label><br/>
-    <button type="submit">찾기</button>
-</form>
+<div class="head">
+    <h1><a href="/survey">SeoulTour</a></h1>
+    <a href="#" class="btn_normal">Sign out</a>
+</div>
+<div class="container container_survey">
+    <h2 class="hidden_txt">여행 취향 설문조사 페이지</h2>
+    <p class="motion_txt" id="motionTxt">
+        안녕하세요!<br>
+        지금부터 서울의 아름다운 구석구석을 알려드릴게요.
+    </p>
+    <div class="motion_change hidden">
+        <div class="inner_change">
+            <ul class="list_change">
+                <li>북촌한옥마을</li>
+                <li>별마당도서관</li>
+                <li>서울재즈페스티벌</li>
+                <li>서울둘레길 - 북한산코스</li>
+                <li>더현대 서울</li>
+            </ul>
+        </div>
+        <p class="txt_change"> 가보셨나요?</p>
+    </div>
+    <div class="motion_survey hidden">
+        <h3>당신의 여행 취향을 알려주세요!</h3>
+        <form action="#" th:action="@{/recommand}" th:object="${surveyForm}" method="post">
+            <div class="box_inpcheck">
+                <input type="checkbox" th:field="*{surveyOptions[0]}" id="inpCheck1" class="inp_check">
+                <label class="lab_check" for="inpCheck1">
+                    <span class="ico_input">
+                        <svg class="img_input" viewBox="0 0 12 9">
+                            <path class="path_input" fill="none" stroke="#fff" d="M0.609511547 4.02374009 4.43960073 7.69241205 11.8408789 0.582270441"></path>
+                        </svg>
+                    </span>
+                    <span class="txt_label">핫한 유명 관광지는 무조건 가요.</span>
+                </label>
+            </div>
+            <div class="box_inpcheck">
+                <input type="checkbox" th:field="*{surveyOptions[1]}" id="inpCheck2" class="inp_check">
+                <label class="lab_check" for="inpCheck2">
+                    <span class="ico_input">
+                        <svg class="img_input" viewBox="0 0 12 9">
+                            <path class="path_input" fill="none" stroke="#fff" d="M0.609511547 4.02374009 4.43960073 7.69241205 11.8408789 0.582270441"></path>
+                        </svg>
+                    </span>
+                    <span class="txt_label">박물관이나 미술관 관람을 선호해요.</span>
+                </label>
+            </div>
+            <div class="box_inpcheck">
+                <input type="checkbox" th:field="*{surveyOptions[2]}" id="inpCheck3" class="inp_check">
+                <label class="lab_check" for="inpCheck3">
+                    <span class="ico_input">
+                        <svg class="img_input" viewBox="0 0 12 9">
+                            <path class="path_input" fill="none" stroke="#fff" d="M0.609511547 4.02374009 4.43960073 7.69241205 11.8408789 0.582270441"></path>
+                        </svg>
+                    </span>
+                    <span class="txt_label">액티비티한 스포츠 활동을 즐겨요.</span>
+                </label>
+            </div>
+            <div class="box_inpcheck">
+                <input type="checkbox" th:field="*{surveyOptions[3]}" id="inpCheck4" class="inp_check">
+                <label class="lab_check" for="inpCheck4">
+                    <span class="ico_input">
+                        <svg class="img_input" viewBox="0 0 12 9">
+                            <path class="path_input" fill="none" stroke="#fff" d="M0.609511547 4.02374009 4.43960073 7.69241205 11.8408789 0.582270441"></path>
+                        </svg>
+                    </span>
+                    <span class="txt_label">신나는 축제와 공연을 좋아해요.</span>
+                </label>
+            </div>
+            <div class="box_inpcheck">
+                <input type="checkbox" th:field="*{surveyOptions[4]}" id="inpCheck5" class="inp_check">
+                <label class="lab_check" for="inpCheck5">
+                    <span class="ico_input">
+                        <svg class="img_input" viewBox="0 0 12 9">
+                            <path class="path_input" fill="none" stroke="#fff" d="M0.609511547 4.02374009 4.43960073 7.69241205 11.8408789 0.582270441"></path>
+                        </svg>
+                    </span>
+                    <span class="txt_label">여행에서 쇼핑은 빠질 수 없는 필수 코스!</span>
+                </label>
+            </div>
+           <button type="submit" class="btn_special">찾기</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const motionTxtElement = document.getElementById("motionTxt");
+        const motionChangeElement = document.querySelector(".motion_change");
+        const hiddenElements = document.querySelectorAll(".hidden");
+
+        const lines = [
+            "안녕하세요!",
+            "지금부터 서울의 아름다운 구석구석을 알려드릴게요."
+        ];
+
+        function typeLine(text, delay, callback) {
+            let charIndex = 0;
+            function typeEffect() {
+                if (charIndex < text.length) {
+                    motionTxtElement.innerHTML += text[charIndex];
+                    charIndex++;
+                    setTimeout(typeEffect, 80);
+                } else {
+                    setTimeout(callback, 1000); // n초 후 다음 줄을 출력
+                }
+            }
+            setTimeout(typeEffect, delay); // 지정된 시간 후에 타이핑 시작
+        }
+
+        function startTyping() {
+            motionTxtElement.innerHTML = ""; // 초기화
+            typeLine(lines[0], 2000, function() {
+                motionTxtElement.innerHTML += "<br>"; // 줄바꿈 추가
+                typeLine(lines[1], 0, function() {
+                    setTimeout(() => {
+                        motionTxtElement.style.opacity = 0;
+                        setTimeout(() => {
+                            motionTxtElement.classList.add("hidden");
+                            showMotionChange();
+                        }, 1000); // 1초 후에 hidden 클래스를 추가
+                    }, 1000);
+                });
+            });
+        }
+
+        function showMotionChange() {
+            motionChangeElement.classList.remove("hidden");
+            motionChangeElement.classList.add("animate-slide-in");
+
+            setTimeout(() => {
+                const allChildren = motionChangeElement.querySelectorAll('*');
+                allChildren.forEach(child => {
+                    child.style.transition = "opacity 1s";
+                    child.style.opacity = 0;
+                });
+
+                motionChangeElement.style.opacity = 0;
+                motionChangeElement.addEventListener('transitionend', () => {
+                    motionChangeElement.classList.add("hidden");
+                    showRemainingContent();
+                }, { once: true });
+            }, 10000);
+        }
+
+        function showRemainingContent() {
+            hiddenElements.forEach(el => {
+                el.classList.remove("hidden");
+                el.style.transition = "opacity 2s";
+                el.style.opacity = 1;
+            });
+        }
+
+        startTyping();
+    });
+
+    // 모든 hidden input 요소를 찾습니다.
+    var hiddenInputs = document.querySelectorAll('input[type="hidden"]');
+
+    // 모든 hidden input 요소를 순회하면서 삭제합니다.
+    hiddenInputs.forEach(function(hiddenInput) {
+        hiddenInput.parentNode.removeChild(hiddenInput);
+    });
+</script>
+
 </body>
 </html>
