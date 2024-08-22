@@ -22,7 +22,7 @@
 
 **tourspot 테이블(서울시 관광지 데이터)**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/51840f7b-1177-4c81-8541-ca5835b9aa2f/Untitled.png)
+![Untitled (8)](https://github.com/user-attachments/assets/bd5ef26e-ea2f-4b2e-873d-2862823a7a94)
 
 placename(관광지 이름)
 
@@ -38,7 +38,8 @@ tourtype (관광 타입)
 
 **hotel 테이블(서울시 숙박 업소 데이터)**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/ce96aed5-3878-41ac-8c2e-6be19a401ab2/Untitled.png)
+![Untitled (9)](https://github.com/user-attachments/assets/be159a2e-b04b-4fed-b579-054a19aa862e)
+
 
 placename(숙박 업소 이름)
 
@@ -59,7 +60,7 @@ tourtype (관광 타입)
 
 ### 메인 페이지
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/59cda75f-84e4-4d70-b32e-e5f1bdf642bc/Untitled.png)
+![Untitled (10)](https://github.com/user-attachments/assets/b4b084f8-2efc-4d94-a851-651ed5909413)
 
 제목 : 서울시 관광지 숙박 예약
 
@@ -78,7 +79,7 @@ tourtype (관광 타입)
 
 ### 회원가입 페이지
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/464b191f-e30e-47db-a052-e69b3eb72306/Untitled.png)
+[Untitled (11)](https://github.com/user-attachments/assets/8f3d55f2-e7b2-4e14-bca6-6c2ce3c46af8)
 
 입력필드 : 
 
@@ -91,7 +92,7 @@ tourtype (관광 타입)
 
 ### 설문조사 페이지
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/99dbc002-755a-4fa3-8ca5-d87f1a39d01d/Untitled.png)
+![Untitled (12)](https://github.com/user-attachments/assets/ec8e0437-27bc-47f5-807b-c7b11cf35ac2)
 
 제목 : 당신의 여행 취향을 알려주세요
 
@@ -107,7 +108,7 @@ tourtype (관광 타입)
 
 ### 여행지 추천 리스트
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/41f81cb5-52a1-4597-9f17-f18ced1af868/Untitled.png)
+![Untitled (13)](https://github.com/user-attachments/assets/f2ca7119-9890-456f-a2cc-764c832ae77d)
 
 제목 : 당신에게 맞는 여행지 추천해줄게요
 
@@ -128,8 +129,7 @@ tourtype (관광 타입)
 
 ### 찜 리스트
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/223a8f1d-95c8-4ef7-baad-76f5b8291fcb/Untitled.png)
-
+![Untitled (14)](https://github.com/user-attachments/assets/7c936081-995d-454f-9b3a-916d7c6f7af1)
 제목 : 찜 리스트
 
 버튼 : 
@@ -194,17 +194,16 @@ com.yourcompany.travelapp
 
 **Seoul Tour Web login page** 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/528d41fb-3e51-4325-96f1-2e53360d8458/Untitled.png)
+![Untitled (15)](https://github.com/user-attachments/assets/e5237103-a1c8-4278-b910-e154cfb1fbd0)
 
 - 회원이 아닐 경우, 어떤 정보도 볼 수 없음
 - SNS 로그인 연동(카카오, 네이버, 구글)
 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/2243fd29-0a9c-46b3-a9de-7783ddee90c6/Untitled.png)
+![Untitled (16)](https://github.com/user-attachments/assets/691a93f9-13bd-429c-8bec-2708b758d7c9)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/368a82d1-d20a-4c66-a2f0-5b9cde4db3db/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/a9675a56-71d1-4af9-9d44-4839664cf950/Untitled.png)
+![Untitled (17)](https://github.com/user-attachments/assets/b811632a-aa37-42aa-9af8-238439a84ad6)
+![Untitled (18)](https://github.com/user-attachments/assets/9d701e8d-4d95-444e-87b6-00f5c3f6d019)
 
 소셜 로그인은 계정이 인증되면 바로 survey 페이지로 리다이렉트 된다
 
@@ -213,20 +212,21 @@ com.yourcompany.travelapp
 
 **Seoul Tour Web Register page** 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/52810854-572e-4809-88d1-848527ca8d12/Untitled.png)
+![Untitled (19)](https://github.com/user-attachments/assets/2fe7a1db-8588-4f91-a3c6-cbd3d93b3f3c)
 
 - 이름, 아이디, 비밀번호, 비밀번호 확인, 이메일 정보를 입력받는다
 - 아이디가 중복될 경우 회원가입 불가
 - 비밀번호와 비밀번호 확인 입력값이 다르면 회원가입 불가
 - SIGN UP 버튼을 눌렀을 때 MariaDB에 적재
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/eae92db6-0524-42c6-9e5f-8ee55da6dd24/Untitled.png)
+![Untitled (20)](https://github.com/user-attachments/assets/125cfcac-6c56-4811-b6ce-01f4b3ce46db)
 
 - 회원가입 성공 시에 로그인 페이지로 이동
 
 **Seoul Tour Web Survey page** 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/ee3982d9-e62b-4049-98a2-16f9636eac4f/Untitled.png)
+![Untitled (21)](https://github.com/user-attachments/assets/f582539e-b287-46a4-b23c-cf3b5c14b9fd)
+
 
 - 로그인이 완료되면 설문조사 페이지로 이동
 - 사용자가 취향에 맞는 여행 스타일을 골라 체크 박스를 선택 후 찾기 버튼 클릭
@@ -234,7 +234,7 @@ com.yourcompany.travelapp
 
 **Seoul Tour Web recommand page** 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/54417143-a465-427d-ae76-08ce195ca7bb/b433feaa-e438-477d-aca9-275e775eae15/Untitled.png)
+![Untitled (22)](https://github.com/user-attachments/assets/d77d4c9a-9838-449b-92ab-b8e3f5cc7516)
 
 - 설문조사의 결과 페이지로 서울시 여행 추천 페이지로 이동
 - 관광 타입 별로 서울시 추천 여행지 list 제공
